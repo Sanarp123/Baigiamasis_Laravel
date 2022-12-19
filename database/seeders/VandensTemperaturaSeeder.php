@@ -14,6 +14,6 @@ class VandensTemperaturaSeeder extends Seeder
      */
     public function run()
     {
-        //
+        
     }
-}
+};
