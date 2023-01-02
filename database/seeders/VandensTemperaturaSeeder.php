@@ -17,3 +17,16 @@ class VandensTemperaturaSeeder extends Seeder
         
     }
 };
+
+
+// public function run()
+//             {
+//                 $json = File::get("storage/app/ezerai.json");
+//                 $ezerai = json_decode($json);
+          
+//                 foreach ($ezerai as $key => $value) {
+//                     Ezerai::create([
+//                         "name" => $value->name ])
+//                         return ['name'];
+//                 }
+//             };

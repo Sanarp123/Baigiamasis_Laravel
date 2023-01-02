@@ -20,19 +20,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
     {
         
         return [          
-            'pavadinimas' => $this->
-
-            public function run()
-            {
-                $json = File::get("storage/app/ezerai.json");
-                $ezerai = json_decode($json);
-          
-                foreach ($ezerai as $key => $value) {
-                    Ezerai::create([
-                        "name" => $value->name ])
-                        
-        }};
-                        'temperatura' => $this->faker->numberBetween(0, 30)
+            'temperatura' => $this->faker->numberBetween(0, 30)
         ];
     }
 };

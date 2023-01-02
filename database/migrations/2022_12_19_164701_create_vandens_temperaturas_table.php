@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('vandens_temperaturas', function (Blueprint $table) {
             $table->id();
+            $table->string('pavadinimas');
+            $table->integer('temperatura-(C)');
+            $table->string('komentaras');
             $table->timestamps();
         });
     }
