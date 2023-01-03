@@ -25,25 +25,37 @@ class WaterSeeder extends Seeder
         $json = File::get("storage/app/json/ezerai.json");
         $ezerai = json_decode($json);
         // $rand_num -> faker->numberBetween(0, $key)
-        
-        // $element = $ezerai[mt_rand(0, count($arr) - 1)];
+        for ($i = 0; $i < 15; $i++)
+{
+        $element = mt_rand(0, count($ezerai) - 1);
+        water::create([
+            'pavadinimas' => $ezerai[$element]->name,
+            'temperatura' => $faker->numberBetween(0, 30),
+            'komentaras' => $faker->text(20)
+        ]);
 
-$i = 0;
-                            foreach ($ezerai as $key => $value) {
-                                if ($i==15) {
-                                    break;
-                                }
-                                water::create([
-                                    'pavadinimas' => $value->name,
-                                    'temperatura' => $faker->numberBetween(0, 30),
-                                    'komentaras' => $faker->text(20)
-                                ]);
-                                $i++;
-                            };
+}
 
-                            // 'temperatura (C)' => $this-> Faker\Factory::create();
-                            // numberBetween(0, 30)
-                            // for ($i=0; $i < 15; $i++)
+
+
+
+
+    
+
+// $i = 0;
+//                             foreach ($ezerai as $key => $value) {
+//                                 if ($i==15) {
+//                                     break;
+//                                 }
+//                                 water::create([
+//                                     'pavadinimas' => $value->name,
+//                                     'temperatura' => $faker->numberBetween(0, 30),
+//                                     'komentaras' => $faker->text(20)
+//                                 ]);
+//                                 $i++;
+//                             };
+
+
    
 }
 }
