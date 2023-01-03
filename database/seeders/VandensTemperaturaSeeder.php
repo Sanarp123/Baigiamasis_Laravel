@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\vandens_temperatura;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\File;
 
 class VandensTemperaturaSeeder extends Seeder
 {
@@ -14,19 +16,19 @@ class VandensTemperaturaSeeder extends Seeder
      */
     public function run()
     {
-        
-    }
-};
+        for ($i=0; $i < 15; $i++)
+        {
+                            $json = File::get("storage/app/json/ezerai.json");
+                            $ezerai = json_decode($json);
+                      
+                            foreach ($ezerai as $key => $value) {
+                                vandens_temperatura::create([
+                                    "pavadinimas" => $value->name,
+                                    'temperatura' => $this->faker->numberBetween(0, 30)
+                                ]);
+                            };
+                         
+   }
+}};
 
-
-// public function run()
-//             {
-//                 $json = File::get("storage/app/ezerai.json");
-//                 $ezerai = json_decode($json);
-          
-//                 foreach ($ezerai as $key => $value) {
-//                     Ezerai::create([
-//                         "name" => $value->name ])
-//                         return ['name'];
-//                 }
-//             };
+// $element = $arr[mt_rand(0, count($arr) - 1)];

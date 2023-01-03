@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('vandens_temperaturas', function (Blueprint $table) {
+        Schema::create('vandens_temperatura', function (Blueprint $table) {
             $table->id();
             $table->string('pavadinimas');
-            $table->integer('temperatura-(C)');
+            $table->integer('temperatura (C)');
             $table->string('komentaras');
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vandens_temperaturas');
+        Schema::dropIfExists('vandens_temperatura');
     }
 };

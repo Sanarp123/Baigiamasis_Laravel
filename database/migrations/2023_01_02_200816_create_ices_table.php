@@ -13,16 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ledo_storis', function (Blueprint $table) {
-            $table->id();
-            $table->float('coord_x');
-            $table->float('coord_y');
-            $table->integer('storis (cm)');
-            $table->string('komentaras');
-            $table->timestamps();
+        Schema::create('ices', function (Blueprint $table) {
+                $table->id();
+                $table->float('coord_x');
+                $table->float('coord_y');
+                $table->integer('storis (cm)');
+                $table->string('komentaras');
+                $table->timestamps();
+            
         });
-
-     }
+    }
 
     /**
      * Reverse the migrations.
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ledo_storis');
+        Schema::dropIfExists('ices');
     }
 };

@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\vandens_temperatura;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -20,7 +21,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
     {
         
         return [          
-            'temperatura' => $this->faker->numberBetween(0, 30)
-        ];
+            // 'temperatura' => $this->faker->numberBetween(0, 30),
+            // 'pavadinimas' =>
+            
+                   ];
     }
 };

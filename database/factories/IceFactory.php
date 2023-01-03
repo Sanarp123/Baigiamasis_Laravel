@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\ledo_storis>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\ice>
  */
-class LedoStorisFactory extends Factory
+class IceFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -20,7 +20,7 @@ class LedoStorisFactory extends Factory
             'coord_x' => $this->faker->numberBetween(535400, 562700),
             'coord_y' => $this->faker->numberBetween(205600, 265100),
             'storis' => $this->faker->numberBetween(0, 30),
-            'komentaras' => $this->faker->text()
+            'komentaras' => $this->faker->text(100)
         ];
     }
 }

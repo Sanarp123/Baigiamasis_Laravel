@@ -2,11 +2,12 @@
 
 namespace Database\Seeders;
 
-use Database\Factories\LedoStorisFactory;
+use App\Models\ice;
+use Database\Factories\IceFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class LedoStorisSeeder extends Seeder
+class IceSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,6 +16,6 @@ class LedoStorisSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\ledo_storis::Factory()->count(10)->create();
+        ice::Factory()->count(10)->create();
     }
 }
