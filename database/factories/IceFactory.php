@@ -19,7 +19,7 @@ class IceFactory extends Factory
         return [
             'coord_x' => $this->faker->numberBetween(535400, 562700),
             'coord_y' => $this->faker->numberBetween(205600, 265100),
-            'storis' => $this->faker->numberBetween(0, 30),
+            'storis (cm)' => $this->faker->numberBetween(0, 30),
             'komentaras' => $this->faker->text(100)
         ];
     }

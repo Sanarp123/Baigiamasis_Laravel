@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\ice;
 use Database\Factories\IceFactory;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class IceSeeder extends Seeder
@@ -16,6 +15,6 @@ class IceSeeder extends Seeder
      */
     public function run()
     {
-        ice::Factory()->count(10)->create();
+        ice::factory()->count(10)->create();
     }
 }

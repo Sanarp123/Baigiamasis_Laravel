@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('vandens_temperatura', function (Blueprint $table) {
+        Schema::create('waters', function (Blueprint $table) {
             $table->id();
             $table->string('pavadinimas');
             $table->integer('temperatura');
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vandens_temperatura');
+        Schema::dropIfExists('waters');
     }
 };
