@@ -21,8 +21,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
     {
         
         return [          
-            // 'temperatura' => $this->faker->numberBetween(0, 30),
-            // 'pavadinimas' =>
+            'temperatura (C)' => $this->faker->numberBetween(0, 30),
             
                    ];
     }

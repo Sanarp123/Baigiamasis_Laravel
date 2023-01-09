@@ -15,8 +15,19 @@ class IceController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $ice_all = ice::all();
+        $ice_markers = array();
+
+        foreach($ice_all as $ice_item) {
+            array_push($ice_markers, array(
+                'title' => $ice_item->id,
+                'lat' => $ice_item->coord_x,
+                'lng' => $ice_item->coord_y,
+            ));
+        }
+
+        return view('main', ['ice_markers' => $ice_markers]);
+   }
 
     /**
      * Show the form for creating a new resource.

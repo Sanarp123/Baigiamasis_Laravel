@@ -17,8 +17,8 @@ class IceFactory extends Factory
     public function definition()
     {
         return [
-            'coord_x' => $this->faker->numberBetween(535400, 562700),
-            'coord_y' => $this->faker->numberBetween(205600, 265100),
+            'coord_x' => bcdiv($this->faker->numberBetween(53540000, 56270000), 1000000, 6),
+            'coord_y' => bcdiv($this->faker->numberBetween(20560000, 26510000), 1000000, 6),
             'storis (cm)' => $this->faker->numberBetween(0, 30),
             'komentaras' => $this->faker->text(100)
         ];

@@ -15,7 +15,8 @@ class LedoStorisController extends Controller
      */
     public function index()
     {
-        //
+        $ledo_storis = ledo_storis::all();
+        return view('main', ['ledo_storis' => $ledo_storis]);
     }
 
     /**
