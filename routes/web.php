@@ -24,3 +24,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::get('/', [IceController::class, 'index'])->name('main');
+
+Route::get('/pateikti', function () {
+    return view('ledas/pateikti');
+})->name('pateikti');

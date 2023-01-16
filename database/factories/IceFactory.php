@@ -19,7 +19,7 @@ class IceFactory extends Factory
         return [
             'coord_x' => bcdiv($this->faker->numberBetween(53540000, 56270000), 1000000, 6),
             'coord_y' => bcdiv($this->faker->numberBetween(20560000, 26510000), 1000000, 6),
-            'storis (cm)' => $this->faker->numberBetween(0, 30),
+            'storis' => $this->faker->numberBetween(0, 30),
             'komentaras' => $this->faker->text(100)
         ];
     }

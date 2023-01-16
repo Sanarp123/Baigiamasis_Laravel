@@ -23,6 +23,13 @@ class IceController extends Controller
                 'title' => $ice_item->id,
                 'lat' => $ice_item->coord_x,
                 'lng' => $ice_item->coord_y,
+                'popup' => strval($ice_item->storis). ' cm. '. $ice_item->komentaras,
+                'icon' => 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                'icon_size' => [20, 32],
+                'icon_anchor' => [0, 32],
+    
+
+                
             ));
         }
 
