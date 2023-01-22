@@ -109,6 +109,7 @@ class IceController extends Controller
      */
     public function destroy(ice $ice)
     {
-        //
+        $ice->delete();
+        return redirect()->route('ice.index')->with('success_message', 'Įrašas buvo ištrintas sėkmingai.');
     }
 }

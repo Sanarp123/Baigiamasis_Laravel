@@ -15,11 +15,11 @@
             </div>
             <div class="form-group ">
                 <label for="latitude"></label>
-                <input type="float" value="" class="form-control" id="latitude">
+                <input type="number" step="0.0000001" value="" class="form-control" name="latitude" id="latitude">
             </div>
             <div class="form-group ">
                 <label for="longitude"></label>
-                <input type="float" value="" class="form-control" id="longitude">
+                <input type="number" step="0.0000001" value="" class="form-control" name="longitude" id="longitude">
             </div>
 
             <br>

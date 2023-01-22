@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('ices', function (Blueprint $table) {
                 $table->id();
                 $table->float('coord_x', 9,7);
-                $table->float('coord_y',9,7);
+                $table->float('coord_y',8,6);
                 $table->integer('storis');
                 $table->string('komentaras');
                 $table->timestamps();

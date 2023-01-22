@@ -29,4 +29,5 @@ Route::get('/pateikti', function () {return view('ice/pateikti');})->name('patei
 
 Route::post('ice/store', [IceController::class,'store'])->name('ice.store');
 Route::get('ice/index2', [IceController::class,'index2'])->name('ice.index');
+Route::post('/destroy/{ice}', [IceController::class,'destroy'])->name('ice.destroy');
 
