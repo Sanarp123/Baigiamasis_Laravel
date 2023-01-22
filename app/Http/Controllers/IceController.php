@@ -26,15 +26,17 @@ class IceController extends Controller
                 'popup' => strval($ice_item->storis). ' cm. '. $ice_item->komentaras,
                 'icon' => 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
                 'icon_size' => [20, 32],
-                'icon_anchor' => [0, 32],
-    
-
-                
+                'icon_anchor' => [0, 32],                
             ));
         }
-
         return view('main', ['ice_markers' => $ice_markers]);
    }
+
+   public function index2()
+   {
+    $ices = Ice::all();
+    return view('ice.index', ['ices' => $ices]);
+  }
 
     /**
      * Show the form for creating a new resource.
@@ -52,9 +54,17 @@ class IceController extends Controller
      * @param  \App\Http\Requests\StoreiceRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreiceRequest $request)
+    public function store(StoreIceRequest $request)
     {
-        //
+        $ice = new Ice;
+        $ice->storis = $request->ledo_storis;
+        $ice->coord_x = $request->latitude;
+        $ice->coord_y = $request->longitude;
+        $ice->komentaras = $request->komentaras;
+
+        $ice->save();
+
+        return redirect()->route('main')->with('success_message', 'Duomenys pateikti sėkmingai.');
     }
 
     /**

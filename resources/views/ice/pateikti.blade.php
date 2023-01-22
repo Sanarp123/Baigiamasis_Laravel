@@ -3,7 +3,7 @@
 
 <div class="container">
     <h1>Pateikti duomenis apie ledo storį</h1>
-        <form method="POST" action="{{url('')}}">
+        <form method="POST" action="{{route('ice.store')}}">
             @csrf
             <div class="form-group">
                 <label>Ledo storis</label>
@@ -15,11 +15,11 @@
             </div>
             <div class="form-group ">
                 <label for="latitude"></label>
-                <input type="number" value="" class="form-control" id="latitude">
+                <input type="float" value="" class="form-control" id="latitude">
             </div>
             <div class="form-group ">
                 <label for="longitude"></label>
-                <input type="number" value="" class="form-control" id="longitude">
+                <input type="float" value="" class="form-control" id="longitude">
             </div>
 
             <br>

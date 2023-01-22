@@ -35,7 +35,8 @@ class VandensTemperaturaSeeder extends Seeder
 
                          
    }
-}};
+}
+};
 
 // $element = $arr[mt_rand(0, count($arr) - 1)];
 // \App\Models\ledo_storis::Factory()->count(10)->create();
