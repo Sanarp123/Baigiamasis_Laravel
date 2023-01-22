@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         
-        <!-- @if(session('danger_message'))
+        @if(session('danger_message'))
             <div class="alert alert-danger">
                 {{ session('danger_message')}}
             </div>
@@ -13,7 +13,7 @@
             <div class="alert alert-success">
                 {{ session('success_message')}}
             </div>
-        @endif -->
+        @endif
 
         <table class="table table-striped">
             <tr>
