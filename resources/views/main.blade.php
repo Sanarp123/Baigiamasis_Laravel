@@ -20,11 +20,5 @@
      'zoom' => 7,
      'markers' => $ice_markers,
  ])
-
-
-
-
-
-
 @mapscripts
 @endsection

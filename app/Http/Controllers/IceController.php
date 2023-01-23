@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\ice;
 use App\Http\Requests\StoreiceRequest;
 use App\Http\Requests\UpdateiceRequest;
+use Kyslik\ColumnSortable\Sortable;
+
 
 class IceController extends Controller
 {
@@ -34,7 +36,7 @@ class IceController extends Controller
 
    public function index2()
    {
-    $ices = Ice::all();
+    $ices = Ice::sortable()->get();
     return view('ice.index', ['ices' => $ices]);
   }
 

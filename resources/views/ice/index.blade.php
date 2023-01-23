@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        
-        @if(session('danger_message'))
+
+@if(session('danger_message'))
             <div class="alert alert-danger">
                 {{ session('danger_message')}}
             </div>
@@ -15,13 +14,16 @@
             </div>
         @endif
 
+    <div class="container">
+        
         <table class="table table-striped">
             <tr>
                 <th>Id</th>
-                <th>Ledo storis (cm)</th>
-                <th>Komentaras</th>
-                <th>Platuma</th>
-                <th>Ilguma</th>
+                <th>@sortablelink('storis', 'Ledo storis')</th>
+                <th>@sortablelink('komentaras','komentaras') </th>
+                <th>@sortablelink('coord_x', 'Platuma')</th>
+                <th>@sortablelink('coord_x', 'Ilguma')</th>
+                <th>@sortablelink('created_at', 'Sukūrimo data')</th>
                 <th>Veiksmai</th>
             </tr>
 
@@ -32,6 +34,7 @@
                     <td>{{ $ice->komentaras }}</td>
                     <td>{{ $ice->coord_x }}</td>
                     <td>{{ $ice->coord_y }}</td>
+                    <td>{{ $ice->created_at }}</td>
                     <td>
                         <form method="POST" action="{{route('ice.destroy', $ice)}}">
                             @csrf
