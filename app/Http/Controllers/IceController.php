@@ -36,7 +36,7 @@ class IceController extends Controller
 
    public function index2()
    {
-    $ices = Ice::sortable()->get();
+    $ices = Ice::sortable()->paginate(5);
     return view('ice.index', ['ices' => $ices]);
   }
 

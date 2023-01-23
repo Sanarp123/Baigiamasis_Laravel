@@ -44,5 +44,6 @@
                 </tr>
             @endforeach
         </table>
+        {{$ices->links()}}
     </div>
 @endsection
