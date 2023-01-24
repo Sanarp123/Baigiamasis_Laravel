@@ -26,7 +26,11 @@
                 <th>@sortablelink('created_at', 'Sukūrimo data')</th>
                 <th>Veiksmai</th>
             </tr>
-
+                @if ($ices->count() == 0)
+                    <tr>
+                        <td colspan="5">Nėra įrašų.</td>
+                    </tr>
+        @endif
             @foreach($ices as $ice)
                 <tr>
                     <td>{{ $ice->id }}</td>
@@ -44,6 +48,10 @@
                 </tr>
             @endforeach
         </table>
-        {{$ices->links()}}
+        {!! $ices->appends(Request::except('page'))->render() !!}
+
+        <p>
+            Rodoma {{$ices->count()}} iš {{ $ices->total() }} įrašų.
+        </p>    
     </div>
 @endsection
