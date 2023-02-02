@@ -7,7 +7,7 @@
             @csrf
             <div class="form-group">
                 <label>Ledo storis</label>
-                <input type="number" class="form-control" name="ledo_storis" id="ledo_storis">
+                <input type="number" class="form-control" name="ledo_storis" id="ledo_storis" required>
             </div>
             <div class="form-group">
                 <label>Komentaras</label>
@@ -15,11 +15,11 @@
             </div>
             <div class="form-group ">
                 <label for="latitude"></label>
-                <input type="number" step="0.0000001" value="" class="form-control" name="latitude" id="latitude">
+                <input type="number" step="0.0000001" value="" class="form-control" name="latitude" id="latitude" required>
             </div>
             <div class="form-group ">
                 <label for="longitude"></label>
-                <input type="number" step="0.0000001" value="" class="form-control" name="longitude" id="longitude">
+                <input type="number" step="0.0000001" value="" class="form-control" name="longitude" id="longitude" required>
             </div>
 
             <br>

@@ -33,12 +33,25 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
+
+                    @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('ice.index') }}">Ledo submitai</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('ice.index') }}">Analizių raportai</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('ice.index') }}">Pateikti raportą</a>
+                    </li>
+                    @endauth
+
+                        <!-- <li class="nav-item">
                             <form class="d-flex">
                                 <input class="form-control me-2" type="text" placeholder="Ieškoti">
                                 <button class="btn btn-primary" type="button">Paieška</button>
                             </form>
-                        </li>
+                        </li> -->
                        
                     </ul>
 
