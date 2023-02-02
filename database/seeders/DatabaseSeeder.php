@@ -19,7 +19,11 @@ class DatabaseSeeder extends Seeder
         $this->call(
             [
                 IceSeeder::class,
-                WaterSeeder::class
+                WaterSeeder::class,
+                UsersSeeder::class,
+                ReportSeeder::class,
+
+
             ]
             );
     }
