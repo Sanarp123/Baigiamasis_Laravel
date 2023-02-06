@@ -39,7 +39,7 @@
                         <a class="nav-link" href="{{ route('ice.index') }}">Ledo submitai</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('ice.index') }}">Analizių raportai</a>
+                        <a class="nav-link" href="{{ route('report.index') }}">Analizių raportai</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('ice.index') }}">Pateikti raportą</a>

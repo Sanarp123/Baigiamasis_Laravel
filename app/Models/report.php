@@ -11,6 +11,6 @@ class report extends Model
     use HasFactory;
 
     public function ReportCreator(){
-        $this->belongsto(User::class, 'id', 'creator_id');
+      return $this->belongsto(User::class, 'Creator_id');
     }
 }

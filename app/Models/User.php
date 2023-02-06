@@ -23,22 +23,25 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'imone',
-        'confirmed',
+    
+    ];
+
+    protected $attributes = [
+        'imone' => 'Default Imone',
+        'confirmed' => False,
 
     ];
 
-    protected $sortable = [
+    public $sortable = [
         'name',
         'email',
-        'password',
         'imone',
         'confirmed',
 
     ];
     
     public function UserReports(){
-        $this->hasMany(Report::class, 'id', 'creator_id');
+        $this->hasMany(Report::class, 'creator_id', 'id');
     }
 
     /**

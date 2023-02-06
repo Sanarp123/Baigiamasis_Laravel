@@ -21,9 +21,7 @@ class DatabaseSeeder extends Seeder
                 IceSeeder::class,
                 WaterSeeder::class,
                 UsersSeeder::class,
-                ReportSeeder::class,
-
-
+                ReportSeeder::class
             ]
             );
     }
