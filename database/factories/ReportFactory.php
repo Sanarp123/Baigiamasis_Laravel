@@ -19,7 +19,7 @@ class ReportFactory extends Factory
         return [
             'A_parameter' => $this->faker->numberBetween(0, 30),
             'B_parameter' => $this->faker->numberBetween(0, 30),
-            'Creator_id' => $this->faker->numberBetween(0, 10),
+            'Creator_id' => $this->faker->numberBetween(1, 11),
             ];
     }
 }

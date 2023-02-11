@@ -19,7 +19,11 @@ class PermissionSeeder extends Seeder
             'user-view',
             'user-create',
             'user-edit',
-            'user-delete'
+            'user-delete',
+            'permission-view',
+            'role-view',
+
+
 
 
 

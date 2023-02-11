@@ -20,8 +20,7 @@ class DatabaseSeeder extends Seeder
             [
                 IceSeeder::class,
                 WaterSeeder::class,
-                PermissionSeeder::class,
-                UsersSeeder::class,
+
                 ReportSeeder::class,
 
             ]
