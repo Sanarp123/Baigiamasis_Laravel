@@ -42,11 +42,15 @@
                     <td>{{ $report->ReportCreator->imone }}</td>
                     <td>{{ $report->A_parameter }}</td>
                     <td>{{ $report->B_parameter }}</td>
-                    <td>{{ $report->B_parameter }}</td>
+                    <td>'Delete'</td>
 
                 </tr>
             @endforeach
         </table>
+        {!! $reports->appends(Request::except('page'))->render() !!}
 
+        <p>
+            Rodoma {{$reports->count()}} iš {{ $reports->total() }} įrašų.
+        </p>    
     </div>
 @endsection
