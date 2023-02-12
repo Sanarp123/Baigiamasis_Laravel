@@ -9,10 +9,11 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Kyslik\ColumnSortable\Sortable;
 use App\Models\report;
+use Spatie\Permission\traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable, Sortable ;
+    use HasApiTokens, HasFactory, Notifiable, Sortable, HasRoles ;
 
     /**
      * The attributes that are mass assignable.

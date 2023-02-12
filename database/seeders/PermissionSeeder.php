@@ -22,11 +22,6 @@ class PermissionSeeder extends Seeder
             'user-delete',
             'permission-view',
             'role-view',
-
-
-
-
-
         ];
             foreach($permissions as $permission) {
                 Permission::create(['name'=> $permission]);

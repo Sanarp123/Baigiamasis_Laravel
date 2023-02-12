@@ -42,7 +42,12 @@
                     <td>{{ $report->ReportCreator->imone }}</td>
                     <td>{{ $report->A_parameter }}</td>
                     <td>{{ $report->B_parameter }}</td>
-                    <td>'Delete'</td>
+                    <td>        
+                        <form method="POST" action="{{route('report.destroy', $report)}}">
+                            @csrf
+                            <button class="btn btn-danger" type="submit">Ištrinti</button>
+                        </form>
+                    </td>
 
                 </tr>
             @endforeach

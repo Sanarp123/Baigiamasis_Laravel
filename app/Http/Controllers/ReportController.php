@@ -85,6 +85,7 @@ class ReportController extends Controller
      */
     public function destroy(report $report)
     {
-        //
+        $report->delete();
+        return redirect()->route('report.index')->with('success_message', 'Raportas buvo ištrintas sėkmingai.');
     }
 }

@@ -44,6 +44,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('ice.index') }}">Pateikti raportą</a>
                     </li>
+                    
                     @endauth
 
                         <!-- <li class="nav-item">
